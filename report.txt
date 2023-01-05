@@ -1,0 +1,20 @@
+
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class report {
+
+	public static void main(String[] args) {
+		
+               ExtentSparkReporter reporter new ExtentSparkReporter("./TestReport.html");
+               ExtentReports extent = new ExtentReports();
+               extent.attachReporter (reporter);
+               
+               ExtentTest test = extent.createTest("TC001 - https://sakshingp.github.io/assignment/login.html");
+               test.pass("Enter the name");
+               test.pass("Enter the pasword");
+               test.pass("click on login");
+               extent.flush();
+}
+
+}
